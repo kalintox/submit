@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="春の花スライドショー">
+<meta name="description" content="春の花を紹介しています。">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link href="flower.css" rel="stylesheet">
+<link rel="stylesheet" href="responsflower.css" media="screen and (max-width:767px)">
+<link rel="icon" href="images/favicon.png">
+
+<title>春の花　スライドショー</title>
+<script>
+//------------------------------------------------------------------------------
+//    スライドショー表示
+//------------------------------------------------------------------------------
+var pno = 1;
+var pnum = 8;
+var ptime = 2000;
+var pname = '';
+var flower = new Array();
+flower[0] = '菜の花';
+flower[1] = 'えんどう';
+flower[2] = 'たんぽぽ（種）';
+flower[3] = 'なでしこ';
+flower[4] = 'あざみ';
+flower[5] = 'きんぽうげ';
+flower[6] = 'てっせん';
+flower[7] = '白花たんぽぽ';
+function slide(){
+	if(pno > pnum){
+		pno = 1;
+	}
+	pname = 'images/spring' + pno + '.jpg';
+	document.getElementById('sld').src = pname;
+	document.getElementById('fnm').innerHTML = flower[pno-1];
+	pno++;
+	setTimeout('slide()', ptime);
+}
+//------------------------------------------------------------------------------
+</script>
+</head>
+<body id="flowersld" onload='slide()'>
+	<header>
+		<h1 id="fon">春の花スライドショー</h1>
+	</header>
+	<div id="contents">
+		<p>
+		<img src="" id="sld" alt="春の花スライドショー">
+		</p>
+	</div>
+	<footer>
+		<p id="fnm"></p>
+		<p><img src="images/close_btn.gif" alt="閉じるボタン" width="60" height="25" onClick='window.close();'>
+		<input type="button" value="下線" onclick="chgUnder()">
+		<input type='button' value="サイズ変更" onclick="chgSize()">
+		<input type='button' value="元に戻す" onclick="chgClear()">
+		<input type='button' value="写真をダウンロード" onclick="location.href='flower_spring.zip'">
+		</p>
+	</footer>
+	<script src="flower.js"></script>
+</body>
+</html>

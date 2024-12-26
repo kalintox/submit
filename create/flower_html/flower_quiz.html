@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="季節の花,春の花,夏の花,秋の花,冬の花,花クイズ">
+<meta name="description" content="花に関する問題６問です。">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link href="flower.css" rel="stylesheet">
+<link rel="stylesheet" href="responsflower.css" media="screen and (max-width:767px)">
+<link rel="icon" href="images/favicon.png">
+
+<title>季節の花　問題フォーム</title>
+<script>
+//------------------------------------------------------------------
+//            問題のチェック
+//------------------------------------------------------------------
+function checkq(){
+	var corr = 0;
+	if (document.quiz.flower01[0].checked) corr++;
+	if (document.quiz.flower02[3].checked) corr++;
+	if (document.quiz.flower03[3].checked) corr++;
+	if (document.quiz.flower04[1].checked) corr++;
+	if (document.quiz.flower05[1].checked) corr++;
+	if (document.quiz.flower06[2].checked) corr++;
+	alert(corr + "問正解です");
+}
+//------------------------------------------------------------------
+</script>
+</head>
+<body id="flowerquiz">
+	<header id="pagehead">
+		<h1>花に関する問題！</h1>
+		<p>問題の答えを選択肢の中から選んでください。</p>
+	</header>
+	<div id="contents">
+		<form name="quiz">
+			<div class="que">
+				<p>（１）「冷たい人・冷淡・移り気」は、次のどの花の花言葉でしょう。</p>
+				<p><label><input type="radio" name="flower01" value="あじさい" >あじさい</label>
+					<label><input type="radio" name="flower01" value="パンジー" >パンジー</label>
+					<label><input type="radio" name="flower01" value="マーガレット" >マーガレット</label>
+					<label><input type="radio" name="flower01" value="ききょう" >ききょう</label></p>
+			</div>
+			<div class="que">
+				<img src="images/dogwood.jpg" alt="花２の写真">
+				<p>（２）右の写真の花の名称は、どれでしょう。</p>
+				<p><label><input type="radio" name="flower02" value="つつじ" >つつじ</label>
+					<label><input type="radio" name="flower02" value="花木水" >花木水</label>
+					<label><input type="radio" name="flower02" value="あさがお" >あさがお</label>
+					<label><input type="radio" name="flower02" value="花水木" >花水木</label></p>
+			</div>
+			<div class="que">
+				<p>（３）「乙女心・愛情・調和」は、次のどの花の花言葉でしょう。</p>
+				<p><label><input type="radio" name="flower03" value="ラベンダー" >ラベンダー</label>
+					<label><input type="radio" name="flower03" value="なでしこ" >なでしこ</label>
+					<label><input type="radio" name="flower03" value="さくら" >さくら</label>
+					<label><input type="radio" name="flower03" value="コスモス" >コスモス</label></p>
+			</div>
+			<div class="que">
+				<p>（４）「おしゃべり」は、次のどの花の花言葉でしょう。</p>
+				<p><label><input type="radio" name="flower04" value="ダリア" >ダリア</label>
+					<label><input type="radio" name="flower04" value="アマリリス" >アマリリス</label>
+					<label><input type="radio" name="flower04" value="つつじ" >つつじ</label>
+					<label><input type="radio" name="flower04" value="サボテン" >サボテン</label></p>
+			</div>
+			<div class="que">
+				<img src="images/thistle.jpg" alt="花５の写真">
+				<p>（５）右の写真の花の名称は、どれでしょう。</p>
+				<p><label><input type="radio" name="flower05" value="スミレ" >スミレ</label>
+					<label><input type="radio" name="flower05" value="アザミ" >アザミ</label>
+					<label><input type="radio" name="flower05" value="アズミ" >アズミ</label>
+					<label><input type="radio" name="flower05" value="アケビ" >アケビ</label></p>
+			</div>
+			<div class="que">
+				<p>（６）ガーベラの花言葉は、次のどれでしょう。</p>
+				<p><label><input type="radio" name="flower06" value="美人" >美人</label>
+					<label><input type="radio" name="flower06" value="魅惑" >魅惑</label>
+					<label><input type="radio" name="flower06" value="壮大な心" >壮大な心</label>
+					<label><input type="radio" name="flower06" value="純潔" >純潔</label></p>
+			</div>
+			<div class="que">
+				<p><input type="button" value="採点する" onclick="checkq()">
+					<input type="reset" name="rst" value="リセット"></p>
+			</div>
+		</form>
+	</div>
+	<footer>
+		<hr>
+		<p><a href="#pagehead">ページの先頭へ</a></p>
+		<address>
+			メールでのお問い合わせは
+			<a href="mailto:hana@web.ne.jp">hana@web.ne.jp</a>へお願いします。
+		</address>
+		<p id="copyright">
+			<small>Copyright &copy; 2024 Hana Flowes Project.</small>
+		</p>
+	</footer>
+	<script src="slideshow.js"></script>
+</body>
+</html>

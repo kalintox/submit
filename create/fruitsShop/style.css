@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+body{
+    background-image: url(images/kabe1.gif);
+    font-family: "MS UI Gothic",Osaka,sans-serif;
+    margin:0;
+}
+header{
+    width:800px;
+    margin:0 auto;
+    background-color: #f7f9b9;
+}
+#contents{
+    width:720px;
+    padding:20px 40px;
+    margin:0 auto 30px;
+    background-color: #f7f9b9;
+}
+p{
+    line-height: 1.5em;
+}
+header h1{
+    margin:0;
+}
+header h1 img{
+    width:800px;
+    height:80px;
+}
+#contents h2{
+    border-left: solid 15px #f8b108;
+    border-bottom:solid 3px #0c7104;
+    padding:5px 10px;
+    margin:0;
+}
+form[name="fshop"]{
+    margin-left: 40px;
+}
+form[name="fshop"] select{
+    width:80px;
+    margin-right: 15px;
+}
+form[name="fshop"] input[name="suryo"]{
+    width:50px;
+    margin-right: 15px;
+    text-align: right;
+}
+
+figure{
+    overflow:hidden;
+    margin:0;
+}
+figure img{
+    width:200px;
+    height:150px;
+    margin:10px 0;
+    float:left;
+}
+figcaption{
+    background-color: #ff9900;
+    padding:5px;
+}
+figure ul{
+    line-height: 180%;
+    margin-left: 210px;
+}
+
+table{
+    border:solid 1px #808080;
+}
+th,td{
+    background-color: #98fb98;
+    border:solid 1px #808080;
+    padding:5px;
+}
+table.cart tr th:first-child{
+    width:30px;
+}
+table.cart tr th:nth-child(2),
+table.cart tr th:nth-child(4),
+table.cart tr th:nth-child(5),
+table.cart tr th:nth-child(6){
+    width:50px;
+}
+table.cart tr th:nth-child(3){
+    width:100px;
+}
+
+table.customer tr th{
+    width:100px;
+    text-align:left;
+}
+
+table.customer tr th span.required{
+    /*color:red;*/
+    background-color:red;
+    color:white;
+    font-size:0.7em;
+    /*padding-left: 0.5em;*/
+    margin-left: 0.5em;
+}

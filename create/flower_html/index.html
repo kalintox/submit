@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="季節の花,春の花,夏の花,秋の花,冬の花">
+<meta name="description" content="季節の花を紹介しています。春・夏・秋・冬の花の写真と簡単な説明を載せています。また、花の見ごろ情報などもあります。">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link href="flower.css" rel="stylesheet">
+<link rel="stylesheet" href="responsflower.css" media="screen and (max-width:767px)">
+<link rel="icon" href="images/favicon.png">
+
+<title>季節の花　トップページ</title>
+<script>
+//------------------------------------------------------------------------------
+//    スクロール表示
+//------------------------------------------------------------------------------
+	var smsg = '　　　　ようこそ！私のホームページへ';
+	var sspeed = 50;	//文字を表示するスピード(ミリ秒)
+	function scroll_msg(){
+		document.sarea.stext.value = smsg;
+		smsg = smsg.substring(1,smsg.length) + smsg.substring(0,1);
+		setTimeout('scroll_msg()',sspeed);
+	}
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//    タイプライターで入力しているように表示
+//------------------------------------------------------------------------------
+	var tmsg = '季節の花';
+	var tspeed = 50;      //1文字を表示するスピード(ミリ秒)
+	var i = 0;
+	function type_msg(){
+		if(i <= tmsg.length){
+			document.tarea.ttext.value = tmsg.substring(0, i);
+			setTimeout('type_msg()', tspeed);
+			i++;
+		}
+	}
+
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//    時間に合わせたメッセージを表示
+//------------------------------------------------------------------------------
+	var jmsg = new Array();
+	jmsg[0] = '０時すぎたよ。眠くない？';
+	jmsg[1] = '１時すぎたよ。眠くない？';
+	jmsg[2] = '２時すぎたよ。眠くない？';
+	jmsg[3] = '３時すぎたよ。眠くない？';
+	jmsg[4] = '４時すぎたよ。もう起きた？';
+	jmsg[5] = '５時すぎたよ。もう起きた？';
+	jmsg[6] = '６時すぎたよ。おはよう！';
+	jmsg[7] = '７時すぎたよ。おはよう！';
+	jmsg[8] = '８時すぎたよ。おはよう！';
+	jmsg[9] = '９時すぎたよ。おはよう！';
+	jmsg[10] = '１０時すぎたよ。<br>おはよう！';
+	jmsg[11] = '１１時すぎたよ。<br>もう少しで昼！';
+	jmsg[12] = '１２時すぎたよ。<br>昼ごはんだ！';
+	jmsg[13] = '１３時すぎたよ。<br>午後もがんばろう！';
+	jmsg[14] = '１４時すぎたよ。<br>午後もがんばろう！';
+	jmsg[15] = '１５時すぎたよ。<br>おやつにしよう！';
+	jmsg[16] = '１６時すぎたよ。<br>おなかがすいてきた？';
+	jmsg[17] = '１７時すぎたよ。<br>おなかがすいてきた？';
+	jmsg[18] = '１８時すぎたよ。<br>もうすぐ晩ごはん！';
+	jmsg[19] = '１９時すぎたよ。<br>晩ごはん食べた？';
+	jmsg[20] = '２０時すぎたよ。<br>晩ごはん食べた？';
+	jmsg[21] = '２１時すぎたよ。<br>ドラマおもしろかった？';
+	jmsg[22] = '２２時すぎたよ。<br>ドラマおもしろかった？';
+	jmsg[23] = '２３時すぎたよ。<br>眠くなってきた？';
+	function time_msg(){
+		var tmsg = new Date();
+		document.write(jmsg[tmsg.getHours()]);
+	}
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//    新年までの日数をカウントダウン表示
+//------------------------------------------------------------------------------
+	function newyear_msg(){
+		var nday = new Date();				//現在の日付時刻
+		var gday = nday.getDate();			//日を変数に代入
+		var gmonth = nday.getMonth() + 1;	//月を変数に代入
+		var gyear = nday.getFullYear();		//年を変数に代入
+		var sday, dd;
+		
+		if(gmonth == 1 && gday == 1){
+			document.write(gyear + '年 元旦！<br>あけましておめでとう！');
+		} else if(gmonth == 1 && gday <= 8){
+			document.write(gyear + '年 ' + gday + '日目！<br>あけましておめでとう！');
+		} else if(gmonth == 12 && gday == 31){
+			document.write('大晦日ですね。<br>大掃除は終わりましたか？');
+		} else {
+			sday = new Date(gyear,12,1)	//次の元旦の日付
+			dd = ( sday.getTime() - nday.getTime() ) / ( 24 * 60 * 60 * 1000 );
+			dd = Math.ceil( dd );			//元旦までの日数
+			document.write('新年まで、' + dd + '日です。');
+		}
+	}
+//------------------------------------------------------------------------------
+</script>
+</head>
+<body id="top" onload='type_msg();scroll_msg()'>
+	<header id="pagehead">
+		<!-- タイプライター表示するフォーム -->
+		<form name="tarea">
+			<h1><input type="text" name="ttext" disabled></h1>
+		</form>
+		<p>flowers of season</p>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="index.html">トップ</a></li>
+			<li><a href="spring.html">春の花</a></li>
+			<li><a href="summer.html">夏の花</a></li>
+			<li><a href="autumn.html">秋の花</a></li>
+			<li><a href="winter.html">冬の花</a></li>
+		</ul>
+	</nav>
+	<div id="topimg">
+		<img src="images/top_img.png" alt="トップ画像">
+		<ul>
+			<li><img src="images/top_img.png" alt="トップ画像" class="image1"></li>
+			<li><img src="images/top_img1.png" alt="トップ画像" class="image2"></li>
+			<li><img src="images/top_img2.png" alt="トップ画像" class="image3"></li>
+			<li><img src="images/top_img3.png" alt="トップ画像" class="image4"></li>
+			<li><img src="images/top_img4.png" alt="トップ画像" class="image5"></li>
+		</ul>
+	</div>
+	<div id="contents">
+		<article>
+			<h2>季節の花を紹介</h2>
+			<section id="message">
+				<h3>ごあいさつ</h3>
+				<p>
+					季節の花ホームページを見ていただきありがとうございます。
+					四季折々の花を紹介したいと思い作成しました。
+					今は、まだ数少ないですがこれから少しずつ追加していく予定です。
+					よろしくお願いします。
+				</p>
+			</section>
+			<section id="new">
+				<h3>更新情報・お知らせ</h3>
+				<ul>
+					<li><time datetime="2024-06-07">2024年06月07日</time>
+						春の花の写真のスライドショーを追加しました。</li>
+					<li><time datetime="2024-04-18">2024年04月18日</time>
+						花に関する問題のページを追加しました。</li>
+					<li><time datetime="2024-04-10">2024年04月10日</time>
+						冬の花のページを追加しました。</li>
+					<li><time datetime="2024-03-25">2024年03月25日</time>
+						秋の花のページを追加しました。</li>
+					<li><time datetime="2024-03-02">2024年03月02日</time>
+						ホームページをリニューアルしました。</li>
+				</ul>
+			</section>
+		</article>
+		<aside>
+			<!-- スクロール表示するフォーム -->
+			<form name="sarea">
+				<p><input type="text" name="stext" disabled></p>
+			</form>
+			<!-- 時間に合わせたメッセージを表示 -->
+			<p class="jmsg">
+				<script>
+					time_msg();
+				</script>
+			</p>
+			<!-- 新年までのカウントダウンを表示 -->
+			<p class="jmsg">
+				<script>
+					newyear_msg();
+				</script>
+			</p>
+			<a href="season.html">
+				<dl>
+					<dt id="season">花の見ごろ案内</dt>
+					<dd>花の見ごろの時期や場所の案内</dd>
+				</dl>
+			</a>
+			<a href="contact.html">
+				<dl>
+					<dt id="contact">お問い合わせ</dt>
+					<dd>お問い合わせフォームです</dd>
+				</dl>
+			</a>
+			<a href="flower_quiz.html" onClick="window.open(href,'newflower1'); return false;">
+				<p><img src="images/nav_quiz1.gif" alt="問題に挑戦ボタン" width="200" height="60"
+				onmouseover="src='images/nav_quiz2.gif'"
+				onmouseout="src='images/nav_quiz1.gif'"></p>
+			</a>
+			<a href="spring_slide.html" onClick="window.open(href,'newflower2','left=50,top=0,width=800,height=640'); return false;">
+				<p><img src="images/nav_slide1.gif" alt=春の花スライドボタン" width="200" height="60"
+				onmouseover="src='images/nav_slide2.gif'"
+				onmouseout="src='images/nav_slide1.gif'"></p>
+			</a>
+		</aside>
+	</div>
+	<footer>
+		<hr>
+		<p><a href="#pagehead">ページの先頭へ</a></p>
+		<address>
+			メールでのお問い合わせは
+			<a href="mailto:hana@web.ne.jp">hana@web.ne.jp</a>へお願いします。
+		</address>
+		<p id="copyright">
+			<small>Copyright &copy; 2024 Hana Flowes Project.</small>
+		</p>
+	</footer>
+	<script src="slideshow.js"></script>
+</body>
+</html>

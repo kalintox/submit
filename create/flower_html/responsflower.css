@@ -1,0 +1,116 @@
+@charset "UTF-8";
+html{
+	font-size:100%;
+}
+header,nav,#topimg,#contents,footer,article,article h2,#new,#message,#new ul,aside{
+	width:98%;
+	margin-left:auto;
+	margin-right:auto;
+}
+#topimg img{
+	width:98%;
+	height:auto;
+}
+nav ul li{
+	width:20%;
+}
+header h1, form[name="tarea"] h1 input{
+	font-size:2rem;
+}
+header p{
+	font-size:1rem;
+}
+#contents{
+	font-size:0.85rem;
+}
+nav ul li a{
+	font-size:1.1rem;
+}
+footer{
+	font-size:0.8rem;
+}
+article{
+	overflow:hidden;
+	float:none;
+}
+aside{
+	float:none;
+}
+#new ul{
+	padding:0,1%;
+}
+
+#breadcrumb{
+	display:none;
+}
+
+/* 花の写真と説明 */
+figure{
+	width:48%;
+	margin-left:0.5%;
+	margin-right:0.5%;
+}
+figure img{
+	width:95%;
+	height:auto;
+}
+
+/* 花の見ごろ案内の表 */
+table{
+	width:100%;
+}
+table th, table td{
+	padding:2%;
+}
+table thead tr th:first-child,table thead tr th:nth-child(2){
+	width:14%;
+}
+table thead tr th:nth-child(3){
+	width:21%;
+}
+table thead tr th:nth-child(4){
+	width:41%
+}
+
+
+/* 問い合わせフォーム */
+article #formtoi{
+	text-align:center;
+}
+
+form[name="toi"]{
+	width:auto;
+}
+
+form[name="toi"] input[type="text"]{
+	width:40%;
+}
+
+form[name="toi"] input[type="email"]{
+	width:65%;
+}
+
+form[name="toi"] textarea{
+	width:95%;
+}
+
+/* 花の問題のページ */
+form[name="quiz"]{
+	width:auto;
+}
+form[name="quiz"] .que{
+	height:auto;
+}
+
+/* 春の花のスライド */
+#flowersld header, #flowersld #contents, #flowersld #contents p, #flowersld footer{
+	width:98%;
+	margin:0 auto;
+}
+#flowersld #contents p img{
+	width:100%;
+	height:auto;
+}
+#flowersld footer #fnm{
+	margin:auto 2%;
+}

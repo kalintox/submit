@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="季節の花,春の花,夏の花,秋の花,冬の花">
+<meta name="description" content="季節の花のお問い合わせフォームのページです。">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link href="flower.css" rel="stylesheet">
+<link rel="stylesheet" href="responsflower.css" media="screen and (max-width:767px)">
+<link rel="icon" href="images/favicon.png">
+<title>季節の花　お問い合わせ</title>
+</head>
+<body id="contact">
+	<header id="pagehead">
+		<h1>季節の花</h1>
+		<p>flowers of season</p>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="index.html">トップ</a></li>
+			<li><a href="spring.html">春の花</a></li>
+			<li><a href="summer.html">夏の花</a></li>
+			<li><a href="autumn.html">秋の花</a></li>
+			<li><a href="winter.html">冬の花</a></li>
+		</ul>
+	</nav>
+	<div id="breadcrumb">
+		<p><a href="index.html">トップページ</a>&nbsp;&gt;&nbsp;お問い合わせ</p>
+	</div>
+	<div id="contents">
+		<article>
+			<h2>お問い合わせ</h2>
+			<p>フォームに必要事項を入力および選択して、お問い合わせください</p>
+			<form name="toi" method="post" action="#">
+				<p><label>お名前（必須）<br>
+					<input type="text" name="name" value="" required></label></p>
+				<p><label>メールアドレス（必須）<br>
+					<input type="email" name="mail" value="" required></label></p>
+				<p>性別<br>
+					<label><input type="radio" name="gender" value="男性">男</label>
+					<label><input type="radio" name="gender" value="女性">女</label></p>
+				<p><label>年齢層<br>
+					<select name="agegroup">
+						<option value="">選択してください</option>
+						<option value="10未満">0才～9才</option>
+						<option value="10代">10才～19才</option>
+						<option value="20代">20才～29才</option>
+						<option value="30代">30才～39才</option>
+						<option value="40代">40才～49才</option>
+						<option value="50代">50才～59才</option>
+						<option value="60代">60才～69才</option>
+						<option value="70代">70才～79才</option>
+						<option value="80以上">80才</option>
+					</select></label></p>
+				<p>お問い合わせ項目<br>
+					<label><input type="checkbox" name="item" value="花の名前">花の名前について</label>
+					<label><input type="checkbox" name="item" value="花の見ごろ">花の見ごろについて</label>
+					<label><input type="checkbox" name="item" value="花の写真">花の写真について</label>
+					<label><input type="checkbox" name="item" value="花言葉">花言葉について</label>
+					<label><input type="checkbox" name="item" value="内容">その他</label></p>
+				<p><label>お問い合わせ内容<br>
+					<textarea name="comment"></textarea></label></p>
+				<p><input type="submit" value="送信する">
+					<input type="reset" value="リセット"></p>
+
+			</form>
+		</article>
+		<aside>
+			<a href="season.html">
+				<dl>
+					<dt id="season">花の見ごろ案内</dt>
+					<dd>花の見ごろの時期や場所の案内</dd>
+				</dl>
+			</a>
+			<a href="contact.html">
+				<dl>
+					<dt id="contact">お問い合わせ</dt>
+					<dd>お問い合わせフォームです</dd>
+				</dl>
+			</a>
+		</aside>
+	</div>
+	<footer>
+		<hr>
+		<p><a href="javascript:history.back()"><img src="images/back_btn.gif" alt="戻るボタン" width="100" height="20" class="back"></a></p>
+		<p><a href="#pagehead">ページの先頭へ</a></p>
+		<address>
+			メールでのお問い合わせは
+			<a href="mailto:hana@web.ne.jp">hana@web.ne.jp</a>へお願いします。
+		</address>
+		<p id="copyright">
+			<small>Copyright &copy; 2024 Hana Flowes Project.</small>
+		</p>
+	</footer>
+</body>
+</html>
