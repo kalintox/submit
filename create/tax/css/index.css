@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+body{
+    text-align: center;
+}
+
+form[name="buy"]{
+    text-align: left;
+    display: inline-block;
+}

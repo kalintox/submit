@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link href="css/index.css" rel="stylesheet">
+
+<title>練習問題</title>
+</head>
+<body>
+
+		<form name="buy">
+			<p>お買い物はこちらから</p>
+
+				<p><label><input type="checkbox" name="check1" value="ボールペン" >ボールペン：200円</label></p>
+				<p><label><input type="checkbox" name="check2" value="パスケース" >パスケース：800円</label></p>
+				<p><label><input type="checkbox" name="check3" value="システム手帳" >システム手帳：1,280円</label></p>
+				<p><label><input type="checkbox" name="check4" value="電子手帳" >電子手帳：5,600円</label></p>
+
+			<br>
+			<p>お支払い方法をお選びください</p>
+
+				<p><label><input type="radio" name="check5" id="ck5_1" value="銀行振り込み" >銀行振り込み(送料無料)</label></p>
+				<p><label><input type="radio" name="check5" id="ck5_2" value="クレジットカード" >クレジットカード(手数料200円)</label></p>
+				<p><label><input type="radio" name="check5" id="ck5_3" value="代金引換" >代金引換(送料600円)</label></p>
+
+
+				<p><input type="button" value="計算" onclick="check()"></p>
+				<p>合計(消費税込)：<input type="text" name="result" value="" >円</p>
+
+		</form>
+
+	<script src="js/index.js"></script>
+</body>
+</html>

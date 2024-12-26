@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<!-- 文字コードの指定 -->
+	<meta charset="UTF-8">
+	<title>オセロ</title>
+	<link href="osero.css" rel="stylesheet">
+</head>
+<body>
+	<!-- 現在の手番を表示する -->
+	<p>現在の手番は<span id="current-turn">黒</span>です</p>
+
+	<!-- 盤 -->
+	<div id="stage" class="stage"></div>
+
+	<!-- 各マスを描画するためのテンプレート -->
+	<div id="square-template" class="square">
+		<div class="stone"></div>
+	</div>
+	
+	<button id="pass">パスする</button>
+	
+	<script src="osero.js" type='text/javascript'></script>
+
+</body>
+</html>
